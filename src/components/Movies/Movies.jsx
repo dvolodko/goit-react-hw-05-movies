@@ -60,7 +60,11 @@ export const Movies = () => {
           <Movie key={movie.id}>
             <StyledLink to={`${movie.id}`} state={{ from: location }}>
               <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                src={
+                  movie.poster_path
+                    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                    : 'https://placehold.jp/500x750.png'
+                }
                 alt={movie.title}
               />
               {movie.title}

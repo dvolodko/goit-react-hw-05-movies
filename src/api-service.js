@@ -24,7 +24,7 @@ export const getMovieReviews = async movieId => {
 };
 
 export const getMoviesByKeyword = async keyword => {
-  const moviesByKeyword = `/search/movie?api_key=${API_KEY}&language=en-US&query=${keyword}&include_adult=true`;
+  const moviesByKeyword = `/search/movie?api_key=${API_KEY}&language=en-US&query=${keyword}&include_adult=false`;
   return get(moviesByKeyword);
 };
 
